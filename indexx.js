@@ -92,14 +92,14 @@
       if (maxIndex === 0) {
         document.querySelector("#mainText1").className = "black";
         document.querySelector("#mainText2").textContent = " ";
-        document.querySelector("#image1").src = "../img/8.gif";
+        document.querySelector("#image1").src = "./img/8.gif";
       //   document.body.style.backgroundColor = 'red';
         document.body.style.backgroundImage = "";
       } 
       else if (maxIndex === 1) {
         document.querySelector("#mainText1").className = "pink";
         document.querySelector("#mainText2").textContent = " ";
-        document.querySelector("#image1").src = "../img/8.gif";
+        document.querySelector("#image1").src = "./img/8.gif";
       //   document.body.style.backgroundImage = "url('../img/BG-1.png')";
       } 
 
