@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOVE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- css -->
+    <link rel="stylesheet" href="indexx.css">
+
+    <!-- Teachable Machine -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- =========================================================== -->
+    <!-- ✔️ Create the webcam and label containers -->
+    <!-- =========================================================== -->
+    <div id="webcam-container" class="scribble-cam"></div>
+    <!-- <div id="label-container"></div> -->
+
+    <!-- =========================================================== -->
+
+    <svg width="0" height="0">
+      <filter id="squiggle">
+        <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/>
+      </filter>
+    </svg>
+    
+    <!-- =========================================================== -->
+  
+    <div id="mainText1">Pages of Love</div>
+    <div id="mainText2"></div>
+    <img id="image1">
+
+    <div class="scribble-box" id="buttonRight">
+      <a href="part1.html" id="buttonR">Open Book</a>
+    </div>
+    <div class="scribble-box" id="buttonLeft">
+      <a href="#" id="buttonL" class="button">About Book</a>
+    </div>
+
+    <div id="popup" class="popup">
+      "Pages of Love" <br> explores different stages of first love, <br>
+      from small feelings to confession. <br>
+      Each page uses lyrics from a song <br>
+      that captures different stages of love.
+    </div>
+    
+
+
+
+    <script type="text/javascript" src="indexx.js"></script>
+  </body>
+</html>
+
+
+
+                            

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOVE | Part 5</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- css -->
+    <link rel="stylesheet" href="part5.css">
+
+    <!-- Teachable Machine -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- =========================================================== -->
+    <!-- ✔️ Create the webcam and label containers -->
+    <!-- =========================================================== -->
+    <div id="webcam-container" class="scribble-cam"></div>
+    <!-- <div id="label-container"></div> -->
+
+    <!-- =========================================================== -->
+
+    <svg width="0" height="0">
+      <filter id="squiggle">
+        <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/>
+      </filter>
+    </svg>
+    
+    <!-- =========================================================== -->
+  
+    <div id="mainText1">Melt Inside My Pocket</div>
+    <div id="mainText2"></div>
+    <img id="image1">
+
+    <div class="scribble-box" id="buttonRight">
+      <a href="part6.html" id="buttonR">Next Page</a>
+    </div>
+    <div class="scribble-box" id="buttonLeft">
+      <a href="#" id="buttonL" class="button">Read Lyrics</a>
+    </div>
+
+    <div id="popup" class="popup">
+      내 맘은 진짜야 소중한 걸 줄래<br>
+      떨어뜨릴까봐 더 꼭 쥔 초콜렛<br>
+      This love for real 내 맘을 받아줘<br>
+      Before it melts<br>
+
+      <audio id="bgSong" src="./song/mimp.mp3" loop></audio>
+      <button id="songBtn">Play Song</button>
+      
+    </div>
+    
+
+
+
+    <script type="text/javascript" src="part5.js"></script>
+  </body>
+</html>
+
+
+
+                            

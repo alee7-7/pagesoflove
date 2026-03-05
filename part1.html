@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOVE | Part 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- css -->
+    <link rel="stylesheet" href="part1.css">
+
+    <!-- Teachable Machine -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- =========================================================== -->
+    <!-- ✔️ Create the webcam and label containers -->
+    <!-- =========================================================== -->
+    <div id="webcam-container" class="scribble-cam"></div>
+    <!-- <div id="label-container"></div> -->
+
+    <!-- =========================================================== -->
+
+    <svg width="0" height="0">
+      <filter id="squiggle">
+        <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/>
+      </filter>
+    </svg>
+    
+    <!-- =========================================================== -->
+  
+    <div id="mainText1">Still 3PM</div>
+    <div id="mainText2"></div>
+    <img id="image1">
+
+    <div class="scribble-box" id="buttonRight">
+      <a href="part2.html" id="buttonR">Next Page</a>
+    </div>
+    <div class="scribble-box" id="buttonLeft">
+      <a href="#" id="buttonL" class="button">Read Lyrics</a>
+    </div>
+
+    <div id="popup" class="popup">
+      서롤 길들인단 건 말이야<br>
+      친구가 된단 거지 그 이상도 좋아 난<br>
+      네가 4시에 온다면 난 3시부터 설레어<br>
+      시간이 됐어 This time<br>
+
+      <!-- <a href="./song/still3pm.mp3" id="songBtn">✮ Play Song ✮</a> -->
+      <audio id="bgSong" src="./song/still3pm.mp3" loop></audio>
+      <button id="songBtn">Play Song</button>
+      
+    </div>
+    
+
+
+
+    <script type="text/javascript" src="part1.js"></script>
+  </body>
+</html>
+
+
+
+                            
