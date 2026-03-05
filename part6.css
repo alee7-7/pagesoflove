@@ -220,6 +220,6 @@ canvas {
 }
 
 #songBtn:hover{
-  cursor: url("../img/cursor.png"), auto;
+  cursor: url("./img/cursor.png"), auto;
 }
 
