@@ -1,7 +1,7 @@
 // =================================================
 // ✅ ➊ Paste your model URL
 // =================================================
-   const URL = "https://teachablemachine.withgoogle.com/models/v5iAC48Mz/";
+   const URL = "https://teachablemachine.withgoogle.com/models/FZyRt_04C/";
 
 
 // =================================================
@@ -89,19 +89,43 @@
       // =================================================
       // ✅ ➌ Apply _____ when a specific model is detected
       // =================================================
+      // if (maxIndex === 0) {
+      //   document.querySelector("#mainText1").className = "black";
+      //   document.querySelector("#mainText2").textContent = "";
+      //   document.querySelector("#image1").src = "./img/7.gif";
+      // //   document.body.style.backgroundColor = 'red';
+      //   document.body.style.backgroundImage = "";
+      // } 
+      // else if (maxIndex === 1) {
+      //   document.querySelector("#mainText1").className = "pink";
+      //   document.querySelector("#mainText2").textContent = "";
+      //   document.querySelector("#image1").src = "./img/7.gif";
+      // //   document.body.style.backgroundImage = "url('../img/BG-6.png')";
+      // } 
+
+      // NOTE: My gifs were not working/playing because Chrome was continuously restarting the gif
+      // I checked everything before (ie. cache, if it was a real gif, etc etc)
+      // I searched why Chrome was doing this, and then got help from ChatGPT to figure out how to prevent this from happening
+
       if (maxIndex === 0) {
-        document.querySelector("#mainText1").className = "black";
-        document.querySelector("#mainText2").textContent = "";
-        document.querySelector("#image1").src = "./img/7.gif";
-      //   document.body.style.backgroundColor = 'red';
-        document.body.style.backgroundImage = "";
+      document.querySelector("#mainText1").className = "black";
+      document.querySelector("#mainText2").textContent = "";
+
+      if (document.querySelector("#image1").src.indexOf("7.gif") === -1) {
+         document.querySelector("#image1").src = "./img/7.gif";
+      }
+
+      document.body.style.backgroundImage = "";
       } 
       else if (maxIndex === 1) {
-        document.querySelector("#mainText1").className = "pink";
-        document.querySelector("#mainText2").textContent = "";
-        document.querySelector("#image1").src = "./img/7.gif";
-      //   document.body.style.backgroundImage = "url('../img/BG-6.png')";
-      } 
+      document.querySelector("#mainText1").className = "pink";
+      document.querySelector("#mainText2").textContent = "";
+
+      if (document.querySelector("#image1").src.indexOf("7.gif") === -1) {
+         document.querySelector("#image1").src = "./img/7.gif";
+      }
+      }
+
 
 
       // =================================================
