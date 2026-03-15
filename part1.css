@@ -20,11 +20,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  cursor: url("../img/cursor.png"), auto;
+  cursor: url("./img/cursor.png"), auto;
 }
 
 a {
-  cursor: url("../img/cursor.png"), auto;
+  cursor: url("./img/cursor.png"), auto;
 }
 
 
