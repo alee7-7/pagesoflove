@@ -19,7 +19,7 @@
     <!-- ✔️ Create the webcam and label containers -->
     <!-- =========================================================== -->
     <div id="webcam-container" class="scribble-cam"></div>
-    <!-- <div id="label-container"></div> -->
+    <div class="scribble-camera"></div>
 
     <!-- =========================================================== -->
 
@@ -39,23 +39,27 @@
     <div class="scribble-box" id="buttonRight">
       <a href="part5.html" id="buttonR">Next Page</a>
     </div>
-    <div class="scribble-box" id="buttonLeft">
+    
+    <!-- ==== PREVIOUS LEFT BUTTON;; Revised after final crit ==== -->
+    <!-- <div class="scribble-box" id="buttonLeft">
       <a href="#" id="buttonL" class="button">Read Lyrics</a>
-    </div>
+    </div> -->
 
     <div id="popup" class="popup">
-      It's like a polaroid love<br>
-      내 뜻대로 되지 않아<br>
-      흔한 filter조차 없어<br>
-      But I love the vibe<br>
-
-      <audio id="bgSong" src="./song/polaroidlove.mp3" loop></audio>
-      <button id="songBtn">Play Song</button>
-      
+      <div id="lyrics">
+          It's like a <br>polaroid love<br>
+          내 뜻대로 되지 않아<br>
+          흔한 filter조차 없어<br>
+          But I love the vibe<br>
+      </div>
     </div>
     
+    <div class="scribble-box" id="buttonLeft">
+      <audio id="bgSong" src="./song/PL_1.mp3"></audio>
+      <button id="songBtn">Play Song</button>
+    </div>
 
-
+    <!-- =========================================================== -->
 
     <script type="text/javascript" src="part4.js"></script>
   </body>

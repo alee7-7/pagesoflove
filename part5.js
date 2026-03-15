@@ -89,6 +89,8 @@
       // =================================================
       // ✅ ➌ Apply _____ when a specific model is detected
       // =================================================
+
+      // ==== NOTE: My original code but my gifs were not playing ====
       // if (maxIndex === 0) {
       //   document.querySelector("#mainText1").className = "black";
       //   document.querySelector("#mainText2").textContent = "Stage 5: Courage";
@@ -103,31 +105,32 @@
       //   document.body.style.backgroundImage = "url('./img/BG-5.png')";
       // } 
       
-      // NOTE: My gifs were not working/playing because Chrome was continuously restarting the gif
-      // I checked everything before (ie. cache, if it was a real gif, etc etc)
-      // I searched why Chrome was doing this, and then got help from ChatGPT to figure out how to prevent this from happening
+      // ==== NOTE: My gifs were not working/playing because Chrome was continuously restarting the gif ====
+            // I checked everything before (ie. cache, if it was a real gif, etc etc)
+            // I searched why Chrome was doing this, and then got help from ChatGPT to figure out how to prevent this from happening
 
       if (maxIndex === 0) {
-      document.querySelector("#mainText1").className = "black";
-      document.querySelector("#mainText2").textContent = "Stage 5: Courage";
+         document.querySelector("#mainText1").className = "black";
+         document.querySelector("#mainText2").textContent = "Stage 5: Courage";
 
-      if (document.querySelector("#image1").src.indexOf("5Aa.gif") === -1) {
-         document.querySelector("#image1").src = "./img/5Aa.gif";
-      }
+         if (document.querySelector("#image1").src.indexOf("5Aa.gif") === -1) {
+            document.querySelector("#image1").src = "./img/5Aa.gif";
+         }
 
-      document.body.style.backgroundImage = "";
+         document.body.style.backgroundImage = "";
+         document.querySelector("#popup").style.display = "";
       } 
       else if (maxIndex === 5) {
-      document.querySelector("#mainText1").className = "pink";
-      document.querySelector("#mainText2").textContent = "I might've held on to my feelings for too long";
+         document.querySelector("#mainText1").className = "pink";
+         document.querySelector("#mainText2").textContent = "I might've held on to my feelings for too long";
 
-      if (document.querySelector("#image1").src.indexOf("5Bb.gif") === -1) {
-         document.querySelector("#image1").src = "./img/5Bb.gif";
+         if (document.querySelector("#image1").src.indexOf("5Bb.gif") === -1) {
+            document.querySelector("#image1").src = "./img/5Bb.gif";
+         }
+
+         document.body.style.backgroundImage = "url('./img/BG-5.png')";
+         document.querySelector("#popup").style.display = "none";
       }
-
-      document.body.style.backgroundImage = "url('./img/BG-5.png')";
-      }
-
 
 
       // =================================================
@@ -145,25 +148,30 @@
 // =================================================
    $(document).ready(init);
 
+// ==== PREVIOUS POP-UP LYRICS WINDOW ==== 
+// const btn = document.getElementById("buttonL");
+// const popup = document.getElementById("popup");
 
-const btn = document.getElementById("buttonL");
-const popup = document.getElementById("popup");
+// btn.addEventListener("click", function(e) {
+//   e.preventDefault();
+//   popup.classList.toggle("active");
+// });
 
-btn.addEventListener("click", function(e) {
-  e.preventDefault();
-  popup.classList.toggle("active");
-});
-
-
+// ==== Song Play/Pause function triggered by button ==== 
+      // Help from online resources and ChatGPT to figure out how to change the text based on song (not played, playing, end playing)
 const Sbtn = document.getElementById("songBtn");
 const song = document.getElementById("bgSong");
 
 Sbtn.addEventListener("click", function () {
    if (song.paused) {
       song.play();
-      Sbtn.textContent = "Pause Song";
+      Sbtn.textContent = "Song Playing";
    } else {
       song.pause();
       Sbtn.textContent = "Play Song";
    }
+});
+
+song.addEventListener("ended", function() {
+  Sbtn.textContent = "Play Song"; // reset button text
 });

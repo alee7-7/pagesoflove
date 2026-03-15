@@ -19,7 +19,7 @@
     <!-- ✔️ Create the webcam and label containers -->
     <!-- =========================================================== -->
     <div id="webcam-container" class="scribble-cam"></div>
-    <!-- <div id="label-container"></div> -->
+    <div class="scribble-camera"></div>
 
     <!-- =========================================================== -->
 
@@ -39,23 +39,27 @@
     <div class="scribble-box" id="buttonRight">
       <a href="part3.html" id="buttonR">Next Page</a>
     </div>
-    <div class="scribble-box" id="buttonLeft">
+    
+    <!-- ==== PREVIOUS LEFT BUTTON;; Revised after final crit ==== -->
+    <!-- <div class="scribble-box" id="buttonLeft">
       <a href="#" id="buttonL" class="button">Read Lyrics</a>
-    </div>
+    </div> -->
 
     <div id="popup" class="popup">
-      You're my missing puzzle piece<br>
-      드디어 맞춰진 <br>
-      조각나 있던 <br>
-      맘의 상처까지 가득 채워준<br>
-
-      <audio id="bgSong" src="./song/puzzlepiece.mp3" loop></audio>
-      <button id="songBtn">Play Song</button>
-      
+      <div id="lyrics">
+        You're my missing <br> puzzle piece<br>
+        드디어 맞춰진 <br>
+        조각나 있던 
+        맘의 <br> 상처까지 가득 채워준<br>
+      </div>
     </div>
     
+    <div class="scribble-box" id="buttonLeft">
+      <audio id="bgSong" src="../song/PP_1.mp3"></audio>
+      <button id="songBtn">Play Song</button>
+    </div>
 
-
+    <!-- =========================================================== -->
 
     <script type="text/javascript" src="part2.js"></script>
   </body>

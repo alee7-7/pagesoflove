@@ -19,7 +19,7 @@
     <!-- ✔️ Create the webcam and label containers -->
     <!-- =========================================================== -->
     <div id="webcam-container" class="scribble-cam"></div>
-    <!-- <div id="label-container"></div> -->
+    <div class="scribble-camera"></div>
 
     <!-- =========================================================== -->
 
@@ -39,24 +39,26 @@
     <div class="scribble-box" id="buttonRight">
       <a href="part4.html" id="buttonR">Next Page</a>
     </div>
-    <div class="scribble-box" id="buttonLeft">
+    
+    <!-- ==== PREVIOUS LEFT BUTTON;; Revised after final crit ==== -->
+    <!-- <div class="scribble-box" id="buttonLeft">
       <a href="#" id="buttonL" class="button">Read Lyrics</a>
-    </div>
+    </div> -->
 
     <div id="popup" class="popup">
-      괜히 또 심심할 때 가끔 뜬금없이<br>
-      네가 보내주는 고양이 릴스가 좋아<br>
-      고르고 또 골라서 나름의 답장을 해<br>
-      같이 미소 지을 수 있게 <br>
-      고양이 릴스를 보낼게<br>
-
-      <audio id="bgSong" src="./song/reelationship.mp3" loop></audio>
-      <button id="songBtn">Play Song</button>
-      
+      <div id="lyrics">
+        괜히 또 심심할 때 <br> 가끔 뜬금없이<br>
+        네가 보내주는 <br>고양이  릴스가 좋아<br>
+        고양이 릴스를 보낼게<br>
+      </div>
     </div>
     
+    <div class="scribble-box" id="buttonLeft">
+      <audio id="bgSong" src="../song/RLTNSP_1.mp3"></audio>
+      <button id="songBtn">Play Song</button>
+    </div>
 
-
+    <!-- =========================================================== -->
 
     <script type="text/javascript" src="part3.js"></script>
   </body>

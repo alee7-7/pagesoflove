@@ -15,20 +15,16 @@ html,body {
 }
 
 body {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   transition: background-color 1s ease-in-out;
   background-color: white;
-  /* background-image: url('./img/tiri_oracle1.jpg'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  cursor: url("./img/cursor.png"), auto;
+  cursor: url("../img/cursor.png"), auto;
 }
 
 a {
-  cursor: url("./img/cursor.png"), auto;
+  cursor: url("../img/cursor.png"), auto;
 }
 
 
@@ -50,7 +46,6 @@ a {
   place-items: center;
   z-index: -1;
   /* display: none; */
-
 }
 
 canvas {
@@ -61,19 +56,43 @@ canvas {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-} 
+}
 
-.scribble-cam {
+/*===== Changed the border to a div box behind the camera so squiggle filter doesn't affect the camera feed ====
+      .scribble-cam was original CSS, changed to .scribble-camera to avoid affecting camera feed */
+
+/* .scribble-cam {
   border: 5px solid black;
-  /* padding: 10px; */
+  border: 0px;
+  padding: 10px;
   display: inline-block;
   filter: url(#squiggle);
   border-radius: 15px;
-  /* background-color: #0095e2; */
+  background-color: #e4b100;
+} */
+
+.scribble-camera{
+  position: fixed;
+  top: 80%;
+  left: 10%;
+  width: 200px; /* ✅ #Webcam Width */ 
+  height: 200px; /* ✅ #Webcam Height */ 
+  -webkit-transform: translate(-50%, -50%) scale(1, 1);
+  -moz-transform: translate(-50%, -50%) scale(1, 1);
+  -ms-transform: translate(-50%, -50%) scale(1, 1);
+  -o-transform: translate(-50%, -50%) scale(1, 1);
+  transform: translate(-50%, -50%) scale(1, 1);
+  place-items: center;
+  z-index: -2;
+  border: 6px solid black;
+  display: inline-block;
+  filter: url(#squiggle);
+  border-radius: 15px;
+  background-color: black;
 }
 
 
-/* text ================================================ */
+/* Text ================================================ */
 #mainText1 {
   position: fixed;
   top: 11%;
@@ -128,7 +147,7 @@ canvas {
   z-index: -1;
 }
 
-/* Button ================================================ */
+/* Buttons ================================================ */
 
 .scribble-box {
   display: inline-block;
@@ -176,49 +195,91 @@ canvas {
 }
 
 
-/* Pop up ================================================ */
+/* Pop Up ================================================
+  REVISION AFTER FINAL CRIT: now lyrics on the bottom right */
 
 .button {
   display: inline-block;
 }
 
-.popup {
-  display: none;
+#popup {
+  display: block;
 
   filter: url(#squiggle);
 
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 79%;
+  left: 88%;
   transform: translate(-50%, -50%);
-  
-  padding: 15px;
+
+  width: 270px; 
+  height: 200px;
+}
+
+/*===== Original lyrics CSS design by me ===== 
+    below is with the help of ChatGPT to create Notebook effect in #lyrics div container */
+
+/* #lyrics{
+  padding: 10px 0;
+
   background: white;
   font-family: 'variableFont';
   font-size: 30px;
+  color: #e4b100;
   text-decoration: none;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 5px solid #e4b100;
+} */
+
+/*==== Notebook effect ====*/
+#lyrics {
+  position: relative; 
+  padding: 10px 0 10px 10px; 
+  border-radius: 15px;
+  border: 5px solid #d0d0d0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    #ececec,
+    #ececec 36px,
+    #0095e2 37px,
+    #ececec 38px
+  );
+  background-position: 0 4px;
+
+  font-family: 'variableFont';
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  line-height: 38px;
+  overflow: visible; 
 }
 
-.popup.active {
-  display: block;
-}
+#lyrics::after {
+  content: "";
+  position: absolute;
+  left: 10px; 
+  top: 0;
+  bottom: 0;
+  width: 2px; 
+  background-color: #ff8585;
+} 
 
+/*==== Song Button (PLAY/PAUSE) ====*/
 #songBtn{
+  display: inline-block;
+  
   text-decoration: none;
   color: white;
   background-color: #e4b100;
-  padding: 5px;
-  border-radius: 10px;
   font-family: 'variableFont';
   font-size: 30px;
-  border: 3px solid #e4b100;
-  margin-top: 15px;
+  border: 0px;
 }
 
 #songBtn:hover{
   cursor: url("./img/cursor.png"), auto;
+  color: #e4b100;
+  background-color: white;
 }
-

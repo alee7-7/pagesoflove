@@ -151,17 +151,3 @@ btn.addEventListener("click", function(e) {
   e.preventDefault();
   popup.classList.toggle("active");
 });
-
-
-const Sbtn = document.getElementById("songBtn");
-const song = document.getElementById("bgSong");
-
-Sbtn.addEventListener("click", function () {
-   if (song.paused) {
-      song.play();
-      Sbtn.textContent = "✮ Pause Song ✮";
-   } else {
-      song.pause();
-      Sbtn.textContent = "✮ Play Song ✮";
-   }
-});

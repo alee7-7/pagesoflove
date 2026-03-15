@@ -19,7 +19,7 @@
     <!-- ✔️ Create the webcam and label containers -->
     <!-- =========================================================== -->
     <div id="webcam-container" class="scribble-cam"></div>
-    <!-- <div id="label-container"></div> -->
+    <div class="scribble-camera"></div>
 
     <!-- =========================================================== -->
 
@@ -39,24 +39,26 @@
     <div class="scribble-box" id="buttonRight">
       <a href="part2.html" id="buttonR">Next Page</a>
     </div>
-    <div class="scribble-box" id="buttonLeft">
+
+    <!-- ==== PREVIOUS LEFT BUTTON;; Revised after final crit ==== -->
+    <!-- <div class="scribble-box" id="buttonLeft">
       <a href="#" id="buttonL" class="button">Read Lyrics</a>
-    </div>
+    </div> -->
 
     <div id="popup" class="popup">
-      서롤 길들인단 건 말이야<br>
-      친구가 된단 거지 그 이상도 좋아 난<br>
-      네가 4시에 온다면 난 3시부터 설레어<br>
-      시간이 됐어 This time<br>
-
-      <!-- <a href="./song/still3pm.mp3" id="songBtn">✮ Play Song ✮</a> -->
-      <audio id="bgSong" src="./song/still3pm.mp3" loop></audio>
-      <button id="songBtn">Play Song</button>
-      
+      <div id="lyrics">
+        친구가 된단 거지 <br>그 이상도 좋아 난<br>
+        네가 4시에 온다면 <br>난 3시부터 설레어<br>
+        시간이 됐어<br>
+      </div>
     </div>
-    
 
+    <div class="scribble-box" id="buttonLeft">
+      <audio id="bgSong" src="../song/S3PM_1.mp3"></audio>
+      <button id="songBtn" >Play Song</button>
+    </div>
 
+    <!-- =========================================================== -->
 
     <script type="text/javascript" src="part1.js"></script>
   </body>

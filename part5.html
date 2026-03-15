@@ -19,7 +19,7 @@
     <!-- ✔️ Create the webcam and label containers -->
     <!-- =========================================================== -->
     <div id="webcam-container" class="scribble-cam"></div>
-    <!-- <div id="label-container"></div> -->
+    <div class="scribble-camera"></div>
 
     <!-- =========================================================== -->
 
@@ -39,23 +39,26 @@
     <div class="scribble-box" id="buttonRight">
       <a href="part6.html" id="buttonR">Next Page</a>
     </div>
-    <div class="scribble-box" id="buttonLeft">
+    
+    <!-- ==== PREVIOUS LEFT BUTTON;; Revised after final crit ==== -->
+    <!-- <div class="scribble-box" id="buttonLeft">
       <a href="#" id="buttonL" class="button">Read Lyrics</a>
-    </div>
+    </div> -->
 
     <div id="popup" class="popup">
-      내 맘은 진짜야 소중한 걸 줄래<br>
-      떨어뜨릴까봐 더 꼭 쥔 초콜렛<br>
-      This love for real 내 맘을 받아줘<br>
-      Before it melts<br>
-
-      <audio id="bgSong" src="./song/mimp.mp3" loop></audio>
-      <button id="songBtn">Play Song</button>
-      
+      <div id="lyrics">
+        떨어뜨릴까봐 더 <br> 꼭 쥔 초콜렛<br>
+        This love for real <br>내 맘을 받아줘<br>
+        Before it melts<br>
+      </div>
     </div>
     
+    <div class="scribble-box" id="buttonLeft">
+      <audio id="bgSong" src="../song/MIMP_1.mp3"></audio>
+      <button id="songBtn">Play Song</button>
+    </div>
 
-
+    <!-- =========================================================== -->
 
     <script type="text/javascript" src="part5.js"></script>
   </body>
